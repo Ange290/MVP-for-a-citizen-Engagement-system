@@ -1,0 +1,30 @@
+{
+  "name": "mvp-for-a-citizen-engagement-system",
+  "version": "1.0.0",
+  "description": "MVP for a citizen Engagement system",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ange290/MVP-for-a-citizen-Engagement-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ange290/MVP-for-a-citizen-Engagement-system/issues"
+  },
+  "homepage": "https://github.com/Ange290/MVP-for-a-citizen-Engagement-system#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
