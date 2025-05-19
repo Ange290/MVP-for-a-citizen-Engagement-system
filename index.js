@@ -1,10 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import app from './back-end/routes/router.js';
 
 dotenv.config(); 
 
-const app = express();
+
 const port = process.env.PORT || 6000;
 
 
@@ -29,5 +30,5 @@ app.get('/', (req, res) => {
 
 // Start server
 app.listen(port, () => {
-  console.log(`🚀 Server is running on http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });

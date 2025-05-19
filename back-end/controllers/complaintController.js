@@ -1,4 +1,4 @@
-import Complaint from '../models/Complaint.js';
+import Complaint from '../models/complaintModel.js';
 
 // Submit a new complaint
 export const createComplaint = async (req, res) => {
@@ -42,4 +42,15 @@ export const getComplaintById = async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+};
+
+export const deleteComplaint = async (req,res)=>{
+    try{
+const complaint = await Complaint.findByIdAndDelete(req.params.id);
+ if (!complaint) return res.status(404).json({ error: 'Complaint not found' });
+    res.json({message: 'Complaint deleted successfully', complaint});
+    }
+    catch(err){
+res.status(500).json({error: err.message});
+    }
 };

@@ -24,7 +24,8 @@ const complaintSchema = new mongoose.Schema({
     default: 'Pending'
   },
   agency: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Agency',
     required: true
   },
   createdAt: {
